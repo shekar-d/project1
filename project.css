@@ -35,7 +35,7 @@ ul li a {
 }
 .more_list li {
   width: auto;
-  background-color: linen;
+  background-color: white;
   font-size: small;
   padding: 10px;
   width: 140px;
@@ -60,4 +60,17 @@ ul li a {
 }
 .more_list li a {
   color: black;
+}
+.justify-content-evenly a div {
+  text-align: center;
+}
+.justify-content-evenly a {
+  text-decoration: none;
+  color: black;
+  size: 14px;
+  font-weight: 500;
+}
+.justify-content-evenly {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
