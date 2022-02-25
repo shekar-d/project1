@@ -35,6 +35,13 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
     <title>Project</title>
   </head>
   <body>
@@ -43,7 +50,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"
-              ><img src="bag3.png" alt="" class="brand"
+              ><img src="duke.png" alt="" class="brand"
             /></a>
 
             <form class="d-flex">
@@ -80,8 +87,8 @@
                   </li>
                   <li>
                     <a href="#"
-                      ><span class="material-icons"> sell </span> Sell on
-                      Dukaan</a
+                      ><span class="material-icons"> sell </span> Sell on Dukan
+                      24</a
                     >
                   </li>
                   <li>
@@ -157,7 +164,7 @@
           </a>
           <a href="#">
             <img
-              src="home.jpg"
+              src="chairp.png"
               alt="giftbox"
               style="height: 64px; width: 64px"
             />
@@ -189,6 +196,108 @@
           </a>
         </div>
       </header>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="banner2.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="banner3.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="banner4.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="wrapper">
+        <h4>Trending in Electronics</h4>
+
+        <div class="carousel owl-carousel electronics">
+          <img src="s1.jpeg" alt="img1" />
+          <img src="s2.jpeg" alt="img2" />
+          <img src="s3.jpeg" alt="img3" />
+          <img src="s4.jpeg" alt="img4" />
+          <img src="s5.jpeg" alt="img5" />
+          <img src="s6.jpeg" alt="img6" />
+          <img src="s7.jpeg" alt="img7" />
+        </div>
+      </div>
+      <div class="wrapper">
+        <h4>Best Selling Smartphones</h4>
+
+        <div class="carousel owl-carousel phones">
+          <a href=""><img src="p1.jpeg" alt="image1" /></a>
+          <a href=""><img src="p2.jpeg" alt="image2" /></a>
+          <a href=""><img src="p3.jpeg" alt="image3" /></a>
+          <a href=""><img src="p5.jpeg" alt="image4" /></a>
+          <a href=""><img src="p6.jpeg" alt="image5" /></a>
+          <a href=""><img src="p7.jpeg" alt="image6" /></a>
+          <a href=""><img src="p4.jpeg" alt="image7" /></a>
+        </div>
+      </div>
+      <div class="wrapper">
+        <h4>Latest in Fashion</h4>
+
+        <div class="carousel owl-carousel fashion">
+          <a href=""><img src="c1.jpeg" alt="image1" /></a>
+          <a href=""><img src="c2.jpeg" alt="image2" /></a>
+          <a href=""><img src="c3.jpeg" alt="image3" /></a>
+          <a href=""><img src="c9.jpeg" alt="image4" /></a>
+          <a href=""><img src="c8.jpeg" alt="image5" /></a>
+          <a href=""><img src="c6.jpeg" alt="image6" /></a>
+          <a href=""><img src="c7.jpeg" alt="image7" /></a>
+        </div>
+      </div>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          margin: 10,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          autoplayHoverPause: true,
+
+          responsive: {
+            0: {
+              items: 1,
+              nav: true,
+            },
+            600: {
+              items: 6,
+              nav: true,
+            },
+            1000: {
+              items: 6,
+              nav: true,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
