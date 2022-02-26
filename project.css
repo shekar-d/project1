@@ -151,3 +151,9 @@ ul li a {
 .wrapper:hover .owl-next {
   display: block;
 }
+.carousel-imgs img {
+  transition: 0.2s;
+}
+.carousel-imgs img:hover {
+  transform: scale(1.5);
+}
