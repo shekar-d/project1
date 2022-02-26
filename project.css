@@ -82,13 +82,27 @@ ul li a {
 .phones {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
-h4 {
+.left-span {
   margin: 20px !important;
   font-size: 22px;
   line-height: 32px;
-  display: inline-block;
   font-weight: 500;
+}
+#timer {
+  color: red;
+}
+
+.right-span {
+  float: right;
+  padding: 5px;
+  line-height: 32px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  opacity: 0.8;
+  margin-right: 10px;
 }
 .electronics img {
   width: 100px !important;
@@ -99,6 +113,7 @@ h4 {
 .electronics {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
 .fashion img {
   width: 120px !important ;
@@ -109,33 +124,30 @@ h4 {
 .fashion {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
-.wrapper img:hover {
-  background-color: lightgrey;
-  border-radius: 10px;
-}
-.owl-nav {
+.wrapper .owl-prev,
+.wrapper .owl-next {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  top: 35%;
+  font-size: 2.5rem !important;
+  background-color: lightgray;
 }
-.owl-nav .owl-prev {
-  position: relative;
-  float: left;
-  width: 40px;
-  background: lightgrey !important;
-  font-size: 60px !important;
-  height: 120px !important;
-  opacity: 0.6;
-}
-.owl-nav .owl-next {
-  position: relative;
-  float: right;
-  width: 40px;
+.wrapper .owl-prev {
+  padding: 15px;
+  left: 0;
   background: lightgray !important;
-  font-size: 60px !important;
-  height: 120px !important;
-  opacity: 0.6;
+  opacity: 0.7;
+  display: none;
+}
+.wrapper .owl-next {
+  right: 0;
+  padding: 15px;
+  background: lightgray !important;
+  opacity: 0.7;
+  display: none;
+}
+.wrapper:hover .owl-prev,
+.wrapper:hover .owl-next {
+  display: block;
 }

@@ -231,73 +231,111 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <br />
 
       <div class="wrapper">
-        <h4>Trending in Electronics</h4>
+        <span class="left-span">Top Deals on electronics </span
+        ><span
+          ><img
+            src="timer.svg"
+            alt="timer"
+            style="margin-right: 10px; height: 20px; width: 20px"
+          />
+        </span>
+        <span id="timer"></span>
+        <a href=""><span class="right-span">View All</span></a>
 
-        <div class="carousel owl-carousel electronics">
-          <img src="s1.jpeg" alt="img1" />
-          <img src="s2.jpeg" alt="img2" />
-          <img src="s3.jpeg" alt="img3" />
-          <img src="s4.jpeg" alt="img4" />
-          <img src="s5.jpeg" alt="img5" />
-          <img src="s6.jpeg" alt="img6" />
-          <img src="s7.jpeg" alt="img7" />
+        <div class="carousel owl-carousel electronics carousel-imgs">
+          <a href=""><img src="s1.jpeg" alt="img1" /></a>
+          <a href=""><img src="s2.jpeg" alt="img2" /></a>
+          <a href=""><img src="s3.jpeg" alt="img3" /></a>
+          <a href=""><img src="s4.jpeg" alt="img4" /></a>
+          <a href=""><img src="s5.jpeg" alt="img5" /></a>
+          <a href=""><img src="s6.jpeg" alt="img6" /></a>
+          <a href=""><img src="s7.jpeg" alt="img7" /></a>
         </div>
       </div>
       <div class="wrapper">
-        <h4>Best Selling Smartphones</h4>
+        <span class="left-span">Best Selling Smartphones</span>
+        <a href=""><span class="right-span">View All</span></a>
 
-        <div class="carousel owl-carousel phones">
-          <a href=""><img src="p1.jpeg" alt="image1" /></a>
-          <a href=""><img src="p2.jpeg" alt="image2" /></a>
-          <a href=""><img src="p3.jpeg" alt="image3" /></a>
-          <a href=""><img src="p5.jpeg" alt="image4" /></a>
-          <a href=""><img src="p6.jpeg" alt="image5" /></a>
-          <a href=""><img src="p7.jpeg" alt="image6" /></a>
-          <a href=""><img src="p4.jpeg" alt="image7" /></a>
+        <div class="carousel owl-carousel phones carousel-imgs">
+          <a href=""><img src="p1.jpeg" alt="image8" /></a>
+          <a href=""><img src="p2.jpeg" alt="image9" /></a>
+          <a href=""><img src="p3.jpeg" alt="image10" /></a>
+          <a href=""><img src="p5.jpeg" alt="image11" /></a>
+          <a href=""><img src="p6.jpeg" alt="image12" /></a>
+          <a href=""><img src="p7.jpeg" alt="image13" /></a>
+          <a href=""><img src="p4.jpeg" alt="image14" /></a>
         </div>
       </div>
       <div class="wrapper">
-        <h4>Latest in Fashion</h4>
+        <span class="left-span">Latest in Fashion</span>
+        <a href=""><span class="right-span">View All</span></a>
 
-        <div class="carousel owl-carousel fashion">
-          <a href=""><img src="c1.jpeg" alt="image1" /></a>
-          <a href=""><img src="c2.jpeg" alt="image2" /></a>
-          <a href=""><img src="c3.jpeg" alt="image3" /></a>
-          <a href=""><img src="c9.jpeg" alt="image4" /></a>
-          <a href=""><img src="c8.jpeg" alt="image5" /></a>
-          <a href=""><img src="c6.jpeg" alt="image6" /></a>
-          <a href=""><img src="c7.jpeg" alt="image7" /></a>
+        <div class="carousel owl-carousel fashion carousel-imgs">
+          <a href=""><img src="c1.jpeg" alt="image15" /></a>
+          <a href=""><img src="c2.jpeg" alt="image16" /></a>
+          <a href=""><img src="c3.jpeg" alt="image17" /></a>
+          <a href=""><img src="c9.jpeg" alt="image18" /></a>
+          <a href=""><img src="c8.jpeg" alt="image19" /></a>
+          <a href=""><img src="c6.jpeg" alt="image20" /></a>
+          <a href=""><img src="c7.jpeg" alt="image21" /></a>
         </div>
       </div>
     </div>
 
     <script>
       $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
+        $(".carousel-imgs").owlCarousel({
           margin: 10,
-          loop: true,
           autoplay: true,
           autoplayTimeout: 2000,
           autoplayHoverPause: true,
+          navText: ["❮", "❯"],
 
           responsive: {
             0: {
-              items: 1,
+              items: 2,
               nav: true,
+              loop: true,
             },
             600: {
-              items: 6,
+              items: 4,
               nav: true,
+              loop: true,
             },
             1000: {
               items: 6,
               nav: true,
+              loop: true,
             },
           },
         });
       });
+    </script>
+    <script language="javascript" type="text/javascript">
+      var countDownDate = new Date("April 1, 2022 15:37:25").getTime();
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s  Left";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+      }, 1000);
     </script>
   </body>
 </html>
