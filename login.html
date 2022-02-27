@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .second {
+        margin-top: 10%;
+        box-shadow: 4px 4px 4px 4px lightgray;
+        width: 400px !important;
+        border-radius: 5px;
+        height: auto;
+        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        opacity: 0.9;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 18px;
+        margin-top: 14px;
+        border-radius: 15px;
+      }
+      .button {
+        text-align: center !important;
+      }
+      label {
+        color: white;
+      }
+      a {
+        text-decoration: none !important;
+      }
+      .text {
+        text-align: center;
+        margin-top: 20px;
+        word-spacing: 2px;
+      }
+    </style>
+    <title>Login-page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container second bg-dark">
+        <form>
+          <div class="mb-3">
+            <div class="logo">
+              <img
+                src="duke.png"
+                alt="logo"
+                style="height: 50px; width: 140px"
+              />
+            </div>
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label
+              class="form-check-label"
+              for="exampleCheck1"
+              style="text-align: center"
+              >By continuing, you agre to dukan24's <a href="#">Terms of use</a
+              ><span> and </span><a href="#">Privacy policy</a>
+            </label>
+          </div>
+          <div class="button">
+            <button type="submit" class="btn btn-primary" onclick="login()">
+              Submit
+            </button>
+          </div>
+          <div class="text">
+            <a href="#">New to Dukan24? Create Account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+      function login(username, password) {
+        var username = document.getElementById("exampleInputEmail1").value;
+        var password = document.getElementById("exampleInputPassword1").value;
+        if (username == "naveen@ux.com" && password == "sekhar") {
+          window.open("project.html");
+        } else {
+          alert("you entered wrong credentials");
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
