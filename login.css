@@ -1,0 +1,9 @@
+.modal-footer {
+  justify-content: center !important;
+}
+.submit-button {
+  text-align: center !important;
+}
+.modal-header img {
+  margin-left: 40%;
+}

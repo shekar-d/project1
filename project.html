@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="project.css" type="text/css" />
+    <link rel="stylesheet" href="login.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -67,15 +68,106 @@
               class="navbar-nav me-auto mb-2 mb-lg-0 d-flex mb-3 d-flex mx-auto"
             >
               <li class="nav-item">
-                <a href="login.html"
+                <a href="#" id="image-for-display"
                   ><button
                     class="btn btn-light"
                     type="submit"
                     style="width: 150px"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-data"
+                    id="login-button-id"
                   >
                     login
-                  </button></a
+                  </button>
+                  <img
+                    src="emptyprofile.png"
+                    alt="#"
+                    id="img-button-id"
+                    style="height: 40px; width: 40px"
+                    class="rounded-circle"
+                  />
+                </a>
+                <div
+                  class="modal fade"
+                  id="modal-data"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
                 >
+                  <div class="modal-dialog" id="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header bg-secondary">
+                        <img
+                          src="duke.png"
+                          alt="#"
+                          style="height: 40px; width: 100px"
+                        />
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"
+                              >Email address</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                            />
+                            <div id="emailHelp" class="form-text"></div>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="exampleInputPassword1"
+                              class="form-label"
+                              >Password</label
+                            >
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="exampleInputPassword1"
+                            />
+                          </div>
+                          <div class="mb-3 form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="exampleCheck1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="exampleCheck1"
+                              style="text-align: center"
+                              >By continuing, you agre to dukan24's
+                              <a href="#">Terms of use</a><span> and </span
+                              ><a href="#">Privacy policy</a>
+                            </label>
+                          </div>
+                          <div class="button submit-button">
+                            <button
+                              type="submit"
+                              class="btn btn-primary"
+                              onclick="login()"
+                              ;
+                            >
+                              Submit
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#">New to Dukan24? Create Account</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
 
               <li class="a btn nav-item">
@@ -338,6 +430,28 @@
           document.getElementById("timer").innerHTML = "EXPIRED";
         }
       }, 1000);
+
+      document.getElementById("img-button-id").style.display = "none";
+      function login(username, password) {
+        var username = document.getElementById("exampleInputEmail1").value;
+        var password = document.getElementById("exampleInputPassword1").value;
+
+        flag = 0;
+        if (username == "sekhar@naveen.com" && password == "project") {
+          flag = true;
+        } else {
+          flag = false;
+        }
+        if (flag == true) {
+          document.getElementById("login-button-id").style.display = "none";
+          document.getElementById("img-button-id").style.display = "block";
+          document.getElementById("modal-dialog").style.display = "none";
+        } else {
+          document.getElementById("login-button-id").style.display = "block";
+          document.getElementById("img-button-id").style.display = "none";
+          alert("you have entered wrong credentials");
+        }
+      }
     </script>
   </body>
 </html>
