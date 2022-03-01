@@ -126,6 +126,17 @@ ul li a {
   margin-bottom: 10px;
   margin-top: 15px;
 }
+.watches img {
+  height: 140px !important;
+  width: 115px !important;
+  padding: 5px;
+  margin: 50px !important;
+}
+.watches {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
 .wrapper .owl-prev,
 .wrapper .owl-next {
   position: absolute;
@@ -156,4 +167,8 @@ ul li a {
 }
 .carousel-imgs img:hover {
   transform: scale(1.5);
+}
+.justify-content-evenly div {
+  font-size: 16px;
+  font-weight: 500px;
 }

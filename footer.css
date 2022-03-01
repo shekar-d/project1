@@ -1,0 +1,31 @@
+li {
+  list-style-type: none;
+}
+li a {
+  text-decoration: none;
+  color: azure;
+  font-size: 13px;
+  font-weight: 400px;
+}
+li a:hover {
+  color: beige;
+}
+.container-fluid {
+  width: 100%;
+  height: 300px;
+  font-size: 18px;
+}
+
+.social-links i {
+  color: bisque;
+  font-size: 30px;
+}
+.row {
+  padding: 30px !important;
+}
+h5 {
+  color: #878787;
+}
+.container-fluid {
+  height: auto !important;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="project.css" type="text/css" />
     <link rel="stylesheet" href="login.css" type="text/css" />
+    <link rel="stylesheet" href="footer.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -296,10 +297,10 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
+          <div class="carousel-item" data-bs-interval="2000">
             <img src="banner2.jpg" class="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-item active" data-bs-interval="2000">
             <img src="banner3.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item" data-bs-interval="2000">
@@ -347,6 +348,13 @@
           <a href=""><img src="s5.jpeg" alt="img5" /></a>
           <a href=""><img src="s6.jpeg" alt="img6" /></a>
           <a href=""><img src="s7.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele1.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele2.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele3.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele4.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele5.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele6.jpeg" alt="img7" /></a>
+          <a href=""><img src="ele7.jpeg" alt="img7" /></a>
         </div>
       </div>
       <div class="wrapper">
@@ -375,6 +383,85 @@
           <a href=""><img src="c8.jpeg" alt="image19" /></a>
           <a href=""><img src="c6.jpeg" alt="image20" /></a>
           <a href=""><img src="c7.jpeg" alt="image21" /></a>
+        </div>
+        <div class="wrapper">
+          <span class="left-span">Brand New watches</span>
+          <a href=""><span class="right-span">View All</span></a>
+  
+          <div class="carousel owl-carousel watches carousel-imgs">
+            <a href=""><img src="watch1.jpeg" alt="image15" /></a>
+            <a href=""><img src="watch2.jpeg" alt="image16" /></a>
+            <a href=""><img src="watch3.jpeg" alt="image17" /></a>
+            <a href=""><img src="watch4.jpeg" alt="image18" /></a>
+            <a href=""><img src="watch5.jpeg" alt="image19" /></a>
+            <a href=""><img src="watch6.jpeg" alt="image20" /></a>
+            <a href=""><img src="watch7.jpeg" alt="image21" /></a>
+            <a href=""><img src="watch8.jpeg" alt="image21" /></a>
+            <a href=""><img src="watch9.jpeg" alt="image21" /></a>
+          </div>
+      </div>
+      <div class="container-fluid mt-5 bg-dark text-white">
+        <div class="row text-white">
+          <div class="col-sm-3">
+            <h5>Dukan 24</h5>
+  
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Join Our Team</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">We respect your privacy</a></li>
+            <li><a href="#">Fees and Payment</a></li>
+            <li><a href="#">Returns and refund Policy</a></li>
+            <li><a href="#">Promotions terms & conditions</a></li>
+          </div>
+          <div class="col-sm-3">
+            <h5>Get Help</h5>
+  
+            <li><a href="#">Track your Order</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Cancellations</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Customer Care</a></li>
+            <li><a href="#">How do i Redeem my Coupon</a></li>
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 50px">
+            <h5>Shop by</h5>
+  
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Bag</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Dress</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Collections</a></li>
+          </div>
+          <div class="col-sm-3">
+            <h5 style="margin-bottom: 15px">Follow Us</h5>
+            <div class="social-links" style="word-spacing: 8px">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <hr style="color: white" />
+          <div class="d-flex bd-highlight mb-3" style="margin-top: 20px">
+            <div>
+              <img src="payment.svg" alt="" />
+            </div>
+            <div class="ms-auto">
+              <input type="email" style="border-radius: 5px" /><button
+                type="submit"
+                class="btn-primary"
+                style="border-radius: 5px"
+              >
+                subscribe
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -436,7 +523,7 @@
         var username = document.getElementById("exampleInputEmail1").value;
         var password = document.getElementById("exampleInputPassword1").value;
 
-        flag = 0;
+        flag = false;
         if (username == "sekhar@naveen.com" && password == "project") {
           flag = true;
         } else {
